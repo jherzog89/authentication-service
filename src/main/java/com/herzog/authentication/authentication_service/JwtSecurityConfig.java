@@ -74,6 +74,7 @@ public class JwtSecurityConfig {
                 .build();
     }
 
+    @SuppressWarnings("deprecation")
     @Bean
     public AuthenticationManager authenticationManager(
             UserDetailsService userDetailsService) {
@@ -93,6 +94,7 @@ public class JwtSecurityConfig {
         return new InMemoryUserDetailsManager(user);
     }
 
+    @SuppressWarnings("unused")
     @Bean
     public JWKSource<SecurityContext> jwkSource() {
         JWKSet jwkSet = new JWKSet(rsaKey());
