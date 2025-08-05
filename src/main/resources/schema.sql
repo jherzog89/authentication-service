@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS users (
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    roles VARCHAR(50) NOT NULL,
+    enabled BOOLEAN NOT NULL
+);
